@@ -1,0 +1,91 @@
+body{
+
+
+    text-align: center;
+
+    background-color: yellow;
+}
+
+.d{
+
+
+    margin-top: 8rem;
+
+   background-color: yellowgreen;
+
+  padding: 9rem; 
+
+  border-radius: 2rem;
+}
+
+#in {
+    padding: 3px;
+    box-shadow: 3px 3px 5px grey;
+    font-size: 14px;
+    font-weight: 600;
+    width: 300px;
+  }
+
+
+ #btn {
+ 
+   
+    display: inline-block;
+    outline: 0;
+    text-align: center;
+    cursor: pointer;
+    height: 31px;
+    padding: 0 13px;
+    vertical-align: top;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    transition: all .3s ease;
+    background: #fff;
+    border-color: #e8e8e8;
+    color: #000;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 16px;
+    font-size: 11px;
+    margin-left: 1rem;
+   
+    
+ }
+
+ #btn:hover{
+
+    
+
+    
+        background: #e8e8e8;
+        color: #3d3d3d;
+
+    
+    
+     
+ }
+
+ #h1{
+
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+font-size: 2rem;
+
+color: #25383C
+ }
+
+ #h{
+
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: red;
+
+
+ }
+
+ #ne{
+
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: gold;
+
+ }
+
