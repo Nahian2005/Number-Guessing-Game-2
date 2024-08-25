@@ -1,24 +1,37 @@
 var m=document.querySelector("div #btn");
 var h= document.querySelector("div #h");
 var h1=document.querySelector("div #ne");
-
+var n= document.querySelector("div #in")
 var numberoflose=1;
 var numberofwin=1;
+var numberoftries=1;
 var h4=document.querySelector(" div #h4")
 var h41=document.querySelector("div #h41")
+var h42=document.querySelector("div #h42")
 
 
+n.addEventListener("keyup" ,e =>{
 
+e.preventDefault();
+if(e.keyCode===13){
+
+    console.log("Enter is pressed")
+    m.click();
+}
+
+})
 
 
 m.addEventListener('click', function(){
 
+    var tries= numberoftries++;
+    h42.textContent=`Number of tries: ${tries}` ;
 
-    var n= parseInt(document.querySelector("div #in").value);
+  var num=parseInt(n.value);
 
     var f= Math.floor(Math.random()*10)+1;
 
-if(n==f){
+if(num==f){
 
 h1.textContent="Congratulations! You won the game. To play again, wait untill this meassage dissappears.  ";
 
@@ -62,4 +75,3 @@ h4.textContent="Number of lose:  " +  lose
 
 
 })
-
