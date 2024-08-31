@@ -1,13 +1,26 @@
 var m=document.querySelector("div #btn");
 var h= document.querySelector("div #h");
 var h1=document.querySelector("div #ne");
-var n= document.querySelector("div #in")
-var numberoflose=1;
-var numberofwin=1;
-var numberoftries=1;
-var h4=document.querySelector(" div #h4")
-var h41=document.querySelector("div #h41")
-var h42=document.querySelector("div #h42")
+var n= document.querySelector("div #in");
+var h4=document.querySelector(" div #h4");
+var h41=document.querySelector("div #h41");
+var h42=document.querySelector("div #h42");
+let numberoftries=JSON.parse(localStorage.getItem("numberoftries"));
+
+if(!numberoftries) {
+  numberoftries = 0;
+}
+
+let numberofwin=JSON.parse(localStorage.getItem("numberofwin"));
+if(!numberofwin) {
+  numberofwin = 0;
+}
+
+let numberoflose=JSON.parse(localStorage.getItem("numberoflose"));
+if(!numberoflose) {
+  numberoflose = 0;
+}
+
 
 
 n.addEventListener("keyup" ,e =>{
@@ -22,10 +35,14 @@ if(e.keyCode===13){
 })
 
 
+
+
 m.addEventListener('click', function(){
 
-    var tries= numberoftries++;
-    h42.textContent=`Number of tries: ${tries}` ;
+
+numberoftries++
+    updatenumberoftries();
+    h42.textContent=`Number of tries: ${numberoftries}` ;
 
   var num=parseInt(n.value);
 
@@ -40,9 +57,10 @@ setTimeout(() => {
     h1.textContent="";
 },7000);
 
-var win= numberofwin++;
+ numberofwin++;
+ updatenumberofwin()
 
-h41.textContent="Number of win:  " +  win;
+h41.textContent=`Number of wins: ${numberofwin}`
 
 
 }
@@ -60,9 +78,10 @@ setTimeout(() => {
     
 }, 7000);
 
-var lose= numberoflose++;
+ numberoflose++;
+ updatenumberoflose()
 
-h4.textContent="Number of lose:  " +  lose
+h4.textContent=`Number of lose: ${numberoflose}`
 
 
 
@@ -74,4 +93,31 @@ h4.textContent="Number of lose:  " +  lose
 
 
 
-})
+});
+
+function updatenumberoftries(){
+
+
+  localStorage.setItem("numberoftries", JSON.stringify(numberoftries));
+  
+
+}
+
+function updatenumberofwin(){
+
+
+  localStorage.setItem("numberofwin", JSON.stringify(numberofwin));
+
+}
+
+
+function updatenumberoflose(){
+
+
+  localStorage.setItem("numberoflose", JSON.stringify(numberoflose));
+
+}
+
+
+
+
