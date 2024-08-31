@@ -1,4 +1,5 @@
 var m=document.querySelector("div #btn");
+var m1=document.querySelector("div #btn2")
 var h= document.querySelector("div #h");
 var h1=document.querySelector("div #ne");
 var n= document.querySelector("div #in");
