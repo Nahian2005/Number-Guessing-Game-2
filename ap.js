@@ -2,7 +2,7 @@ var m=document.querySelector("div #btn");
 var h= document.querySelector("div #h");
 var h1=document.querySelector("div #ne");
 var n= document.querySelector("div #in");
-var h4=document.querySelector(" div #h4");
+var h4=document.querySelector("div #h4");
 var h41=document.querySelector("div #h41");
 var h42=document.querySelector("div #h42");
 let numberoftries=JSON.parse(localStorage.getItem("numberoftries"));
@@ -33,9 +33,6 @@ if(e.keyCode===13){
 }
 
 })
-
-
-
 
 m.addEventListener('click', function(){
 
@@ -69,13 +66,8 @@ else{
 
   h.textContent= "You lose the game.  The right number was   :  " +   f   + "; To try again, wait untill this meassage dissappears.   "; 
  
-
-
 setTimeout(() => {
-    h.textContent="";
-
-
-    
+    h.textContent="";    
 }, 7000);
 
  numberoflose++;
@@ -83,15 +75,7 @@ setTimeout(() => {
 
 h4.textContent=`Number of lose: ${numberoflose}`
 
-
-
-
-   
- 
 }
-
-
-
 
 });
 
@@ -99,6 +83,7 @@ function updatenumberoftries(){
 
 
   localStorage.setItem("numberoftries", JSON.stringify(numberoftries));
+  localStorage.removeItem("numberoftries");
   
 
 }
@@ -107,6 +92,7 @@ function updatenumberofwin(){
 
 
   localStorage.setItem("numberofwin", JSON.stringify(numberofwin));
+  localStorage.removeItem("numberofwin");
 
 }
 
@@ -115,8 +101,17 @@ function updatenumberoflose(){
 
 
   localStorage.setItem("numberoflose", JSON.stringify(numberoflose));
+  localStorage.removeItem("numberoflose");
 
 }
+
+m1.addEventListener('click',function(){
+
+  window.location.reload();
+
+})
+
+
 
 
 
