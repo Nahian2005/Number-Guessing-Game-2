@@ -135,6 +135,36 @@ color: #25383C
    margin-left:27rem;
    margin-top: -4.5rem;
  }
+#btn2{
+
+   
+  display: inline-block;
+  outline: 0;
+  text-align: center;
+  cursor: pointer;
+  height: 31px;
+  padding: 0 13px;
+  vertical-align: top;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  transition: all .3s ease;
+  background: #fff;
+  border-color: #e8e8e8;
+  color: #000;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 16px;
+  font-size: 11px;
+  margin-left: 1rem;
+}
+
+#btn2:hover{
+
+  background: red;
+        color: #3d3d3d
+
+}
+
 
 
 
